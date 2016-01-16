@@ -1,0 +1,9 @@
+{
+  "name": "once-upon-a-facebook",
+  "version": "1.0.0",
+  "dependencies": {
+    "modernizr": "2.8.x",
+    "jquery": "1.11.x",
+    "normalize-css": "3.0.x"
+  }
+}

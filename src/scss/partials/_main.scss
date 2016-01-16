@@ -1,0 +1,11 @@
+.main {
+  article{
+    padding-top: $padding;
+
+    .fb-comments {
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
