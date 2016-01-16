@@ -48,5 +48,5 @@ $RECYCLE.BIN/
 *.sublime-workspace
 
 ## App
-config/
+##config/
 cache/
