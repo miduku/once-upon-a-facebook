@@ -62,21 +62,26 @@ h3 {
   // font-size: 1.625em;
   // font-style: normal;
   // font-weight: 400;
-  margin: 0 0 $padding/2;
+  margin: 0 0 0;
+}
+
+h3 + ul,
+h3 + p {
+  margin-top: 0;
 }
 
 h4 {
   // font-size: 1.125em;
   // font-style: normal;
   // font-weight: 400;
-  margin: 0 0 $padding/2;
+  margin: 0 0 0;
 }
 
 h5 {
   // font-size: 1em;
   // font-style: normal;
   // font-weight: normal;
-  margin: 0 0 $padding/2;
+  margin: 0 0 0;
 }
 
 pre {
@@ -109,6 +114,7 @@ code {
 a {
   color: $text-black;
   text-decoration: none;
+  text-transform: uppercase;
   &:hover,
   &:focus {
     text-decoration: none;

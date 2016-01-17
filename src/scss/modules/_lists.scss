@@ -2,6 +2,18 @@
 // Lists
 //----------------------------------*/
 
-.list-unstyled {
+.list-unstyled * {
   list-style: none;
+}
+
+.main {
+  ul {
+    list-style-type: decimal;
+    li {
+    }
+  }
+}
+
+.list-unstyled {
+  // list-style: none;
 }
