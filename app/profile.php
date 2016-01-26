@@ -19,16 +19,16 @@
 
   <header class="header" role="banner">
     <div class="container">
-      <h1><a href="home.html">FACEBOOK</a> Network Communication System</h1>
+      <h1><a href="page.php">FACEBOOK</a> Network Communication System</h1>
       <p>User:
         <br><span class="fb-user">Dao Jones</span></p>
 
       <nav class="nav" role="navigation">
         <ul>
-          <li><a href="home.html">Homepage</a></li>
-          <li><a href="profile.html">Profile</a></li>
-          <li class="active"><a href="friends.html">Friends</a></li>
-          <li><a href="index.html">Log Out</a></li>
+          <li><a href="page.php">Homepage</a></li>
+          <li class="active"><a href="profile.php">Profile</a></li>
+          <li><a href="friends.php">Friends</a></li>
+          <li><a href="index.php">Log Out</a></li>
         </ul>
       </nav>
     </div>
@@ -37,15 +37,36 @@
   <main class="main" role="main">
     <div class="container">
       <article>
-        <h2>Your current friends list</h2>
-        <ul>
-          <li><a href="">Anton Antonio</a></li>
-          <li><a href="">Douglas Engelbart</a></li>
-          <li><a href="">Eduardo Schmidt</a></li>
-          <li><a href="">Heidi Musterfrau</a></li>
-          <li><a href="">Ivan Sutherland</a></li>
-          <li><a href="">Max Mustermann</a></li>
+        <h2>About YOU</h2>
+        <h3>Overview</h3>
+
+        <ul class="list-unstyled">
+          <li>Phone:
+            <ul>
+              <li>Work: BU4-3210</li>
+              <li>Private: ---</li>
+            </ul>
+          </li>
+
+          <li>Lives in
+            <ul>
+              <li>CA 94704, USA</li>
+            </ul>
+          </li>
+
+          <li>Works at
+            <ul>
+              <li>University of California, Berkeley</li>
+            </ul>
+          </li>
+
+          <li>About you:
+            <ul>
+              <lu>I am an American engineer and inventor and am best known for my work in founding the field of human-computer interaction</lu>
+            </ul>
+          </li>
         </ul>
+
       </article>
     </div>
   </main>

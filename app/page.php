@@ -1,3 +1,14 @@
+<?php
+require 'app.php';
+require 'app-login.php';
+require 'app-logout.php';
+require 'app-user.php';
+console_log($accessToken);
+console_log($_COOKIE);
+console_log($_SESSION);
+
+?>
+
 <!doctype html>
 <html class="no-js">
 <head>
@@ -19,16 +30,16 @@
 
   <header class="header" role="banner">
     <div class="container">
-      <h1><a href="home.html">FACEBOOK</a> Network Communication System</h1>
+      <h1><a href="page.php">FACEBOOK</a> Network Communication System</h1>
       <p>User:
-        <br><span class="fb-user">Dao Jones</span></p>
+        <br><span class="fb-user"><?php echo $profile['name']; ?></span></p>
 
       <nav class="nav" role="navigation">
         <ul>
-          <li class="active"><a href="home.html">Homepage</a></li>
-          <li><a href="profile.html">Profile</a></li>
-          <li><a href="friends.html">Friends</a></li>
-          <li><a href="index.html">Log Out</a></li>
+          <li class="active"><a href="page.php">Homepage</a></li>
+          <li><a href="profile.php">Profile</a></li>
+          <li><a href="friends.php">Friends</a></li>
+          <li><a href="<?php echo $logoutUrl; ?>">Logout</a></li>
         </ul>
       </nav>
     </div>
