@@ -1,10 +1,10 @@
 <?php
 require 'app.php';
 require 'app-login.php';
-console_log($accessToken);
+// console_log($accessToken);
 // console_log($loginUrl);
-console_log($_SESSION);
-console_log($_COOKIE);
+// console_log($_SESSION);
+// console_log($_COOKIE);
 // session_destroy();
 ?>
 
@@ -21,6 +21,7 @@ console_log($_COOKIE);
   <link href="//www.google-analytics.com" rel="dns-prefetch">
   <link href="//ajax.googleapis.com" rel="dns-prefetch">
   <link href="assets/css/style.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <script src="assets/components/modernizr.min.js"></script>
   <!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
@@ -50,6 +51,7 @@ console_log($_COOKIE);
 
           <em>For this Demo you only need to login with your existing Facebook account and accept the Facebook App 'O-U-A-F'</em>
           <br><br>
+
           <?php if(isset($accessToken)): ?>
           <a href="page.php" class="tab">Enter</a>
           <?php else: ?>
@@ -72,9 +74,9 @@ console_log($_COOKIE);
   <script src="assets/js/scripts.min.js"></script>
 
   <script>
-  (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
-  (f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
-  l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
+  (function(o,u,a,f,F,H,P){u['GoogleAnalyticsObject']=F;o[F]=o[F]||function(){
+  (o[F].q=o[F].q||[]).push(arguments)},o[F].P=1*new Date();H=u.createElement(a),
+  P=u.getElementsByTagName(a)[0];H.async=1;H.src=f;P.parentNode.insertBefore(H,P)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-XXXXXXXX-XX');
   ga('send', 'pageview');

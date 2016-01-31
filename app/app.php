@@ -3,16 +3,17 @@ ini_set('error_reporting',E_ERROR | E_WARNING | E_PARSE);
 
 // Pass session data over.
 if(!session_id()) {
-    session_start();
+  session_start();
 }
 // Include the required dependencies.
 require_once __DIR__.'/assets/Facebook/autoload.php';
 
 // get config
-$config = json_decode(file_get_contents(__DIR__.'/config/default-test.json'), true);
+$config = json_decode(file_get_contents(__DIR__.'/config/default.json'), true);
 
 // root url of app
-$rootUrl = 'http://localhost:8080/once-upon-a-facebook/app/';
+// $rootUrl = 'http://localhost:8080/once-upon-a-facebook/app/';
+$rootUrl = 'http://dustinkummer.com/work/o-u-a-f/';
 
 // Initialize the Facebook PHP SDK v5 using the Facebook namespace.
 $fb = new Facebook\Facebook([

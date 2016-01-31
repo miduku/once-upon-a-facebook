@@ -14,6 +14,7 @@ $permissions = [
   // 'read_stream',
   'read_custom_friendlists'
 ]; // optional
+
 $callback = $rootUrl . 'index.php';
 
 // Choose your app context helper
@@ -49,6 +50,7 @@ if ( isset( $accessToken ) ) {
   }
   else {
 
+    // logged in
     // getting short-lived access token
     $_SESSION['facebook_access_token'] = (string) $accessToken;
 
@@ -62,6 +64,24 @@ if ( isset( $accessToken ) ) {
     // setting default access token to be used in script
     $fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
   }
+
+  // validating the access token
+  try {
+    $request = $fb->get('/me');
+  } catch(Facebook\Exceptions\FacebookResponseException $e) {
+    // When Graph returns an error
+    if ($e->getCode() == 190) {
+      unset($_SESSION['facebook_access_token']);
+      $loginUrl = $helper->getLoginUrl($callback, $permissions);
+      echo "<script>window.top.location.href='".$loginUrl."'</script>";
+    }
+    exit;
+  } catch(Facebook\Exceptions\FacebookSDKException $e) {
+    // When validation fails or other local issues
+    echo 'Facebook SDK returned an error: ' . $e->getMessage();
+    exit;
+  }
+
 
   // header("Location: ./page.php");
 }
