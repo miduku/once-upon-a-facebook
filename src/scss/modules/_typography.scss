@@ -44,6 +44,10 @@ p {
   font-weight: normal;
 }
 
+p.message {
+  margin: 0;
+}
+
 h1 {
   // font-size: 4.250em;
   // font-style: normal;
@@ -62,7 +66,7 @@ h3 {
   // font-size: 1.625em;
   // font-style: normal;
   // font-weight: 400;
-  margin: 0 0 0;
+  margin: 0 0 $padding/2;
 }
 
 h3 + ul,

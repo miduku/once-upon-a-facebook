@@ -37,7 +37,7 @@
   <main class="main" role="main">
     <div class="container">
       <article>
-        <h2>Your current friends list</h2>
+        <h2>Your current friends and acquaintances using the Facebook Network Communication System</h2>
         <ul>
           <li><a href="">Anton Antonio</a></li>
           <li><a href="">Douglas Engelbart</a></li>

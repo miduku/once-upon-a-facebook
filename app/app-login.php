@@ -1,6 +1,19 @@
 <?php
 // Choose permissions
-$permissions = ['email', 'user_posts', 'read_custom_friendlists']; // optional
+$permissions = [
+  'email',
+  'user_about_me',
+  'user_birthday',
+  'user_friends',
+  'user_likes',
+  'user_location',
+  'user_work_history',
+  'user_education_history',
+  'user_posts',
+  'user_hometown',
+  // 'read_stream',
+  'read_custom_friendlists'
+]; // optional
 $callback = $rootUrl . 'index.php';
 
 // Choose your app context helper

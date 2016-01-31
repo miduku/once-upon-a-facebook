@@ -1,3 +1,12 @@
+<?php
+require 'app.php';
+require 'app-login.php';
+require 'app-logout.php';
+require 'app-profile.php';
+console_log($accessToken);
+// var_dump($profile);
+?>
+
 <!doctype html>
 <html class="no-js">
 <head>
@@ -21,14 +30,14 @@
     <div class="container">
       <h1><a href="page.php">FACEBOOK</a> Network Communication System</h1>
       <p>User:
-        <br><span class="fb-user">Dao Jones</span></p>
+        <br><a href="profile.php" class="fb-user"><?php echo $profile['name']; ?></a></p>
 
       <nav class="nav" role="navigation">
         <ul>
           <li><a href="page.php">Homepage</a></li>
           <li class="active"><a href="profile.php">Profile</a></li>
           <li><a href="friends.php">Friends</a></li>
-          <li><a href="index.php">Log Out</a></li>
+          <li><a href="<?php echo $logoutUrl; ?>">Logout</a></li>
         </ul>
       </nav>
     </div>
@@ -36,38 +45,7 @@
 
   <main class="main" role="main">
     <div class="container">
-      <article>
-        <h2>About YOU</h2>
-        <h3>Overview</h3>
-
-        <ul class="list-unstyled">
-          <li>Phone:
-            <ul>
-              <li>Work: BU4-3210</li>
-              <li>Private: ---</li>
-            </ul>
-          </li>
-
-          <li>Lives in
-            <ul>
-              <li>CA 94704, USA</li>
-            </ul>
-          </li>
-
-          <li>Works at
-            <ul>
-              <li>University of California, Berkeley</li>
-            </ul>
-          </li>
-
-          <li>About you:
-            <ul>
-              <lu>I am an American engineer and inventor and am best known for my work in founding the field of human-computer interaction</lu>
-            </ul>
-          </li>
-        </ul>
-
-      </article>
+      <?php echo $cProfile; ?>
     </div>
   </main>
 

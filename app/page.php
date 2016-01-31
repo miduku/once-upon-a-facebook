@@ -2,11 +2,10 @@
 require 'app.php';
 require 'app-login.php';
 require 'app-logout.php';
-require 'app-user.php';
+require 'app-profile.php';
+require 'app-feed.php';
 console_log($accessToken);
-console_log($_COOKIE);
-console_log($_SESSION);
-
+// var_dump($profile);
 ?>
 
 <!doctype html>
@@ -32,7 +31,7 @@ console_log($_SESSION);
     <div class="container">
       <h1><a href="page.php">FACEBOOK</a> Network Communication System</h1>
       <p>User:
-        <br><span class="fb-user"><?php echo $profile['name']; ?></span></p>
+        <br><a href="profile.php" class="fb-user"><?php echo $profile['name']; ?></a></p>
 
       <nav class="nav" role="navigation">
         <ul>
@@ -47,35 +46,9 @@ console_log($_SESSION);
 
   <main class="main" role="main">
     <div class="container">
-      <article>
-        <h2><a href="">MAX MUSTERMANN</a> shared a post</h2>
-        <span class="fb-time">19 mins</span>
 
-        <p>This system is so nice. I can communicate with all of my friends and co-workers.</p>
+      <?php echo $cFeed; ?>
 
-        <span class="fb-like"><a href="">LIKE</a> (3)</span>
-        <span class="fb-comment"><a href="">COMMENT</a></span>
-
-        <div class="fb-comments">
-          <p><a href="">ANTON ANTONIO</a>
-            <br>Hey Max! I didn't know you were here too. Add me to your freinds list, please.
-            <br><span class="fb-like"><a href="">LIKE</a> (4)</span><span class="fb-reply"><a href="">COMMENT</a></span></p>
-
-          <p><a href="">EDUARDO SCHMIDT</a>
-            <br>Hey you two. I haven't figured out how to add people to the list.
-            <br><span class="fb-like"><a href="">LIKE</a></span><span class="fb-reply"><a href="">COMMENT</a></span></p>
-        </div>
-      </article>
-
-      <article>
-        <h2><a href="">HEIDI MUSTERFRAU</a> shared a post</h2>
-        <span class="fb-time">3 Jan</span>
-
-        <p>I found a nice restaurant just a view minutes away from the university. We should meet there to discuss our current project. What do you think of that idea?</p>
-
-        <span class="fb-like"><a href="">LIKE</a> (83)</span>
-        <span class="fb-comment"><a href="">COMMENT</a></span>
-      </article>
     </div>
   </main>
 

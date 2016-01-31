@@ -1,5 +1,4 @@
 .nav {
-
   ul {
     list-style: none;
   }
@@ -13,6 +12,19 @@
         content: '>\00a0'
       }
     }
+}
+
+.nav-pagination {
+  padding-top: $padding;
+
+  ul {
+    list-style: none !important;
+
+    li {
+      display: inline-block;
+    }
+  }
+
 }
 
 a {

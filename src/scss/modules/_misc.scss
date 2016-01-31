@@ -8,21 +8,16 @@
 }
 
 .fb-user,
-.fb-time,
+// .fb-time,
 .fb-like,
 .fb-comment,
-.fb-comments,
 .fb-reply {
   @extend .tab;
 }
 
 .fb-time {
   margin-top: -$padding/2;
-  margin-bottom: $padding/2;
+  // margin-bottom: $padding/2;
   display: block;
   font-size: .75em;
-}
-
-.fb-comments {
-  padding-top: $padding/2;
 }

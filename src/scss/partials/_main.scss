@@ -2,9 +2,11 @@
   article{
     padding-top: $padding;
 
-    .fb-comments {
-      p:last-child {
-        margin-bottom: 0;
+    .comments {
+      @extend .tab;
+
+      .comment{
+        padding-top: $padding/2;
       }
     }
   }
