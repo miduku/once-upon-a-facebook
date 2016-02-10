@@ -30,7 +30,7 @@ require 'app-feed.php';
 
   <header class="header" role="banner">
     <div class="container">
-      <h1><a href="page.php">FACEBOOK</a> Network Communication System</h1>
+      <h1><a href="index.php">FACEBOOK</a> Network Communication System</h1>
       <p>User:
         <br><a href="profile.php" class="fb-user"><?php echo $profile['name']; ?></a></p>
 
@@ -55,7 +55,7 @@ require 'app-feed.php';
 
   <footer class="footer" role="contentinfo">
     <div class="container">
-      <p>Facebook © 1968</p>
+      <p>_f © 1968</p>
     </div>
   </footer>
 

@@ -30,7 +30,7 @@ require 'app-login.php';
 
   <header class="header" role="banner">
     <div class="container">
-      <h1><a href="index.html">FACEBOOK</a> Network Communication System</h1>
+      <h1><a href="index.php">FACEBOOK</a> Network Communication System</h1>
       <p>Please enter your access credentials to enter the most advanced communications system in the world.</p>
     </div>
   </header>
@@ -49,8 +49,12 @@ require 'app-login.php';
             <input type="text" class="full-width" value="***********" disabled>
           </div>
 
+          <em>This Project is an interface concept which was realized with Facebook's PHP SDK v5 during the course Parallele Universen at the University of Applied Sciences Potsdam. <a href="https://github.com/miduku/once-upon-a-facebook" target="_blank">Sourcecode @GitHub</a></em>
+          <br>
+          <br>
           <em>For this Demo you only need to login with your existing Facebook account and accept the Facebook App 'O-U-A-F'</em>
-          <br><br>
+          <br>
+          <br>
 
           <?php if(isset($accessToken)): ?>
           <a href="page.php" class="tab">Enter</a>
@@ -65,7 +69,7 @@ require 'app-login.php';
 
   <footer class="footer" role="contentinfo">
     <div class="container">
-      <p>Facebook © 1968</p>
+      <p>_f © 1968</p>
     </div>
   </footer>
 
