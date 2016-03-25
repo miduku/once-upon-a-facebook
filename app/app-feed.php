@@ -3,9 +3,10 @@ if (isset($accessToken)) {
 
   // getting feed from the users wall
   try {
-    $feed_request = $fb->get('me/feed?fields=message,from,likes,type,created_time,updated_time,picture,comments{message,like_count,from,created_time}&limit=20}');
 
-    $feed = $feed_request->getGraphEdge()->asArray();
+    $feed_request = $fb->get('me/feed?fields=message,from,likes,type,created_time,updated_time,picture,comments{message,like_count,from,created_time}&limit=1');
+
+    $feed = $feed_request->getGraphEdge();
 
   } catch(Facebook\Exceptions\FacebookResponseException $e) {
 
@@ -91,13 +92,43 @@ foreach ($feed as $data) {
   ';
 }
 
+
+
+/**
+ * pagination
+ */
+
+// next page
+if ($fb->next($feed)) {
+  $nextPage = '<button type="submit" name="next-page">Next page >></button>';
+  // $nextPage = '<li><a href="' . $rootUrl . 'page.php' . $feed->getPaginationUrl(next) .  '">Next page >></a></li>';
+} else {
+  $nextPage = '';
+}
+
+// previous page
+if ($fb->previous($feed)) {
+  $prevPage = '<li><a href="' . $rootUrl . 'page.php' . $feed->getPaginationUrl(previous) .  '"><< Previous page</a></li>';
+} else {
+  $prevPage = '';
+}
+
+$pageLinks = $prevPage . $nextPage;
+
 $cFeed .= '
-  <nav class="nav-pagination">
-    <ul>
-      <li><a href="' . $feed['paging']['previous'] . '"><< Previous page</a></li> |
-      <li><a href="' . $feed['paging']['next'] . '">Next page >></a></li>
-    </ul>
-  </nav>
+  <form action="" method="get" accept-charset="utf-8">
+    <nav class="nav-pagination">
+      <ul>' . $pageLinks . '</ul>
+    </nav>
+  </form>
 ';
+
+
+// // Page 2 (next 5 results)
+// $nextFeed = $fb->next($feed);
+
+// foreach ($nextFeed as $data2) {
+//   var_dump($data2);
+// }
 
 ?>

@@ -4,8 +4,10 @@ require 'app-login.php';
 require 'app-logout.php';
 require 'app-profile.php';
 require 'app-feed.php';
-// console_log($accessToken);
-// var_dump($profile);
+console_log($feed->getPaginationUrl(next));
+
+
+
 ?>
 
 <!doctype html>
@@ -27,6 +29,17 @@ require 'app-feed.php';
   <!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 </head>
 <body>
+
+<pre style="width: 100%; font-size: 14px;"><?php
+// Page 2 (next 5 results)
+$nextFeed = $fb->next($feed);
+
+// foreach ($nextFeed as $data) {
+//   var_dump($data->asArray());
+// }
+// $next_url = parse_url($feed['paging']['next'], PHP_URL_QUERY);
+var_dump($feed->getPaginationRequest(next));
+?></pre>
 
   <header class="header" role="banner">
     <div class="container">

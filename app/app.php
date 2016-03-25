@@ -9,11 +9,11 @@ if(!session_id()) {
 require_once __DIR__.'/assets/Facebook/autoload.php';
 
 // get config
-$config = json_decode(file_get_contents(__DIR__.'/config/default.json'), true);
+$config = json_decode(file_get_contents(__DIR__.'/config/default-test.json'), true);
 
 // root url of app
-// $rootUrl = 'http://localhost:8080/once-upon-a-facebook/app/';
-$rootUrl = 'http://dustinkummer.com/work/o-u-a-f/';
+$rootUrl = 'http://localhost/once-upon-a-facebook/app/';
+// $rootUrl = 'http://dustinkummer.com/work/o-u-a-f/';
 
 // Initialize the Facebook PHP SDK v5 using the Facebook namespace.
 $fb = new Facebook\Facebook([

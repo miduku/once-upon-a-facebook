@@ -5,7 +5,7 @@ if (isset($accessToken)) {
   try {
     $profile_request = $fb->get('/me?fields=name,first_name,last_name,email,work,education,bio,location,hometown');
 
-    $profile = $profile_request->getGraphNode()->asArray();
+    $profile = $profile_request->getGraphNode()/*->asArray()*/;
 
   } catch(Facebook\Exceptions\FacebookResponseException $e) {
 

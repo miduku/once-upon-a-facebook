@@ -11,7 +11,7 @@ $permissions = [
   'user_education_history',
   'user_posts',
   'user_hometown',
-  // 'read_stream',
+  // 'read_stream', // only for facebook branded apps :P
   'read_custom_friendlists'
 ]; // optional
 

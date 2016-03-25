@@ -5,7 +5,7 @@ if (isset($accessToken)) {
   try {
     $friends_request = $fb->get('/me/friends');
 
-    $friends = $friends_request->getGraphEdge()->asArray();
+    $friends = $friends_request->getGraphEdge()/*->asArray()*/;
 
   } catch(Facebook\Exceptions\FacebookResponseException $e) {
 
